@@ -62,7 +62,7 @@ provisioner "remote-exec" {
         "sudo apt install python3-virtualenv -y",
         "python3 -m venv /home/ubuntu/kumar",
         ". /home/ubuntu/kumar/bin/activate",
-        "git clone https://github.com/yeswanthreddy26/mymart08-07.git
+        "git clone https://github.com/yeswanthreddy26/mymart08-07.git",
         "cd mymart08-07",
         "sudo apt install openjdk-17-jdk -y",
         "sudo apt install maven -y",
