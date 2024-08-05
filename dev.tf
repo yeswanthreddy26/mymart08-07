@@ -1,6 +1,6 @@
 
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 resource "aws_security_group" "dev_sg" {
@@ -45,10 +45,11 @@ resource "aws_security_group" "dev_sg" {
 }
 
 resource "aws_instance" "name" {
-  ami = "ami-04a81a99f5ec58529"
+  count = 3
+  ami = "ami-0ad21ae1d0696ad58"
   instance_type = "t2.medium"
-  key_name = "praveen"
-  vpc_security_group_ids = [ "sg-0a5c5fa3d8e5c5b7e" ]
+  key_name = "praveen yeswanth both"
+  vpc_security_group_ids = [ "sg-033cfa00ff518ead4" ]
   tags = {
     Name = "kumar"
   }
