@@ -1,6 +1,6 @@
 
 provider "aws" {
- alias  = "another"
+ alias  = 
   region = "us-east-1"
 }
 
@@ -45,7 +45,7 @@ resource "aws_security_group" "prod_sg" {
 
 }
 
-resource "aws_instance" "name" {
+resource "aws_instance" "nameprod" {
   ami = "ami-04a81a99f5ec58529"
   instance_type = "t2.medium"
   key_name = "praveen"
