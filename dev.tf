@@ -1,7 +1,7 @@
 
 provider "aws" {
  alias  = "us-east"
-  region = "us-east-1c"
+  region = "us-east-2"
 }
 
 resource "aws_security_group" "yash_sg" {
