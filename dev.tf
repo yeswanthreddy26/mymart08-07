@@ -1,9 +1,9 @@
 
 provider "aws" {
-  region = "ap-south-1"
+  region = "us-east-1"
 }
 
-resource "aws_security_group" "dev_sg" {
+resource "aws_security_group" "yash_sg" {
   name = "rds_sg"
   # Define ingress and egress rules for RDS
    # ssh for terraform remote exec
@@ -45,11 +45,10 @@ resource "aws_security_group" "dev_sg" {
 }
 
 resource "aws_instance" "name" {
-  count = 3
-  ami = "ami-0ad21ae1d0696ad58"
+  ami = "ami-04a81a99f5ec58529"
   instance_type = "t2.medium"
   key_name = "praveen"
-  vpc_security_group_ids = [ "sg-033cfa00ff518ead4" ]
+  vpc_security_group_ids = [ "sg-0a5c5fa3d8e5c5b7e" ]
   tags = {
     Name = "kumar"
   }
