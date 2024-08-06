@@ -1,5 +1,5 @@
 
-provider "aws" {
+provider aws.us-east {
  alias  = "us-east"
   region = "us-east-1a"
 }
