@@ -45,7 +45,7 @@ resource "aws_security_group" "test_sg" {
 
 }
 
-resource "aws_instance" "name" {
+resource "aws_instance" "nametest" {
   ami = "ami-04a81a99f5ec58529"
   instance_type = "t2.medium"
   key_name = "praveen"
