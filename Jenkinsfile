@@ -32,11 +32,10 @@ pipeline{
             terraform apply prod.tfplan
             '''
           }
-        }   
-    } 
-    stage('test'){
+        }  
+       stage('test'){
 
-      steps  {
+        steps  {
             sh '''
             terraform init
             terraform plan -out=test.tfplan
