@@ -33,6 +33,17 @@ pipeline{
             '''
           }
         }   
-    }      
+    } 
+    stage('test'){
+
+      steps  {
+            sh '''
+            terraform init
+            terraform plan -out=test.tfplan
+            terraform apply test.tfplan
+            '''
+         }
+       }
+    }
 }
 
